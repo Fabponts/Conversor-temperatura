@@ -14,9 +14,9 @@ public class Main {
         double temperatura = sc.nextDouble();
 
         System.out.println("Digite a unidade desejada: Celsius,fahereint ou kelvin");
-        String unidade = sc.next().toLowerCase();
+        String unidade = sc.next().toLowerCase(); //Uso do toLowerCase
 
-        if (unidade.equals("celsius")){
+        if (unidade.equals("celsius")){ //.equals permite igualar a strings pelo visto
             celsius = temperatura;
             kelvin = celsius + 273.15;
             fahrenheit = (celsius * 9 / 5) + 32;
@@ -32,7 +32,7 @@ public class Main {
             fahrenheit = (kelvin - 273.15) * 9 / 5 + 32;
         }
         else{
-            System.out.println("Unidade invalida");
+            System.out.println("Unidade invalida"); // Nao esquecer de por a opçao invalida também
 
         }
         System.out.println("Temperatura em Celsius: " + celsius);
@@ -41,7 +41,7 @@ public class Main {
         System.out.println("Deseja realizar outra conversão? (s/n)");
 
         resposta = sc.next().charAt(0);
-        }while (resposta != 'n');
+        }while (resposta != 'n'); //Uso do doWhile para poder criar um loop
 
         sc.close();
     }
